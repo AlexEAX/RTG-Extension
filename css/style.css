@@ -1,0 +1,155 @@
+html, body
+{
+  width: 450px !important;
+  height: 500px !important;
+  max-height: 500px !important;
+  overflow: auto;
+  margin: 0;
+}
+p, a
+{
+  display: block-inline;
+}
+#list
+{
+  margin-top: 85px;
+  margin-left: 15px;
+}
+        
+#list {
+  counter-reset: li; 
+  list-style: none; 
+  padding: 0;
+  width: 92%;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+#list div{
+  position: relative;
+  display: block;
+  padding: .05em .05em .05em .1em;
+  margin: .25em 0 .25em 1.25em;
+  left: 10px;
+  right: 10px;
+  background: #D3D4DA;
+  color: #444;
+  text-decoration: none;
+  transition: all .3s ease-out;
+  z-index: 1;
+  cursor: pointer;
+}
+#list div p{
+  padding-left: 6px;
+  margin-block-start: 0.75em;
+  margin-block-end: 0.75em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+#list div:hover {background: #DCDDE1;}
+
+#list p#extra
+{
+  display: none;
+}
+
+#list div:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -2.5em;
+  top: 50%;
+  margin-top: -1em;
+  background: #f9dd94;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  text-align: center;
+  font-weight: bold;
+}
+
+#list div:after {
+  position: absolute;
+  content: "";
+  border: .5em solid transparent;
+  left: -1em;
+  top: 50%;
+  margin-top: -.5em;
+  transition: all .3s ease-out;
+}
+
+#list div:hover:after {
+  left: -.5em;
+  border-left-color: #f9dd94;
+}
+#list div a{
+  float: right; 
+  padding-right: 12px;
+  text-decoration: none;
+  color: blue;
+}
+    
+
+#topWrapper{
+  background-color: white;
+  position: fixed;
+  top:0;
+  width: 100% !important;
+  z-index: 9999;
+}
+
+#topZone, #topLogo
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+#topWrapper img
+{
+  margin: 5px 25%;
+  width: 40% !important;  
+}
+
+button
+{
+  transition: 0.2s ease-in-out;
+  position: relative;
+  list-style: none;
+  border: 0;
+  height: 30px;
+  background-color: aqua;
+  margin-right: 5px;
+
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.colorOn
+{
+  opacity: 1 !important;
+  background-color: bisque !important;
+}
+.colorOff
+{
+  opacity: 1 !important;
+  background-color: chocolate !important;
+}
+#clearList{
+  background-color: red;
+  color: aliceblue;
+}
+span:hover > button{
+  transform: scale(0.95);
+  filter: blur(2px);
+}
+
+span button:hover {
+  filter: blur(0px);
+  transform: scale(1);
+}
+#allTabTrack, #tabTrack
+{
+  opacity: 0;
+}
